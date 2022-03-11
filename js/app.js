@@ -1,3 +1,11 @@
+/* Assignment 7
+1. “Love” button is work.(done)
+2. User profile pic(done)
+3. Text is shown for those whose text is below 30(done)
+4. The comment of each post and the username of the comment are shown.(done)
+5. Clicking on the hide button will show what has been hidden.
+6. Like and home button are everything is fine.
+ */
 let posts = [];
 
 const likedPostsId = [];
@@ -27,7 +35,7 @@ const reportPost = (id) => {
 };
 
 const displayContent = (text) => {
-  return text.length < 30 ? 'text' : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
+  return text.length < 30 ? text : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
 };
 
 const switchTab = (id) => {
@@ -51,7 +59,7 @@ const switchTab = (id) => {
 };
 
 const createPost = (post) => {
-  console.log(post);
+  console.log(post)
   const image = post.image;
   const div = document.createElement("article");
   div.classList.add("post");
@@ -120,9 +128,9 @@ const createPost = (post) => {
                   <div class="post__description">
                     <small>
                       <a class="post__name--underline" href="#">
-                          ${post.comments?.user}
+                          ${post.comments[0].user}
                       </a>
-                      ${post.comments?.text}
+                      ${post.comments[0].text}
                     </small>
                   </div>
                   <span class="post__date-time">30 minutes ago</span>
