@@ -3,7 +3,7 @@
 2. User profile pic(done)
 3. Text is shown for those whose text is below 30(done)
 4. The comment of each post and the username of the comment are shown.(done)
-5. Clicking on the hide button will show what has been hidden.
+5. Clicking on the hide button will show what has been hidden.(done)
 6. Like and home button are everything is fine.
  */
 let posts = [];
@@ -159,8 +159,9 @@ const displayLikedPosts = () => {
 };
 
 const displayReportedPosts = () => {
+  document.getElementById("reported").innerHTML = '';
   const reportedPosts = getReportedPosts();
-  posts.forEach((post) => {
+  reportedPosts.forEach((post) => {
     const div = createPost(post);
     document.getElementById("reported").appendChild(div);
   });
