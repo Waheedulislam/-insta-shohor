@@ -4,7 +4,7 @@
 3. Text is shown for those whose text is below 30(done)
 4. The comment of each post and the username of the comment are shown.(done)
 5. Clicking on the hide button will show what has been hidden.(done)
-6. Like and home button are everything is fine.
+6. Like and home button are everything is fine.(done)
  */
 let posts = [];
 
@@ -151,6 +151,7 @@ const showPosts = (posts) => {
 };
 
 const displayLikedPosts = () => {
+  document.getElementById("liked").innerHTML = '';
   const likedPosts = getLikedPosts();
   likedPosts.forEach((post) => {
     const div = createPost(post);
